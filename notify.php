@@ -5,7 +5,7 @@ $token = "iHgwS5dOJDGgDOc7KZiHsoI8ugjH2mwEAU7DjrsrN9I"; //ใส่Token ที�
 $str = "สวัสดี"; //ข้อความที่ต้องการส่ง สูงสุด 1000 ตัวอักษร
 
 //$res = notify_message($str, $token);
-$res = notify_sticker('ทดสอบสติ๊กเกอร์', 1, 7, $token);
+$res = notify_sticker("ทดสอบสติ๊กเกอร์", 1, 7, $token);
 print_r($res);
 
 
@@ -49,7 +49,7 @@ function notify_sticker($message, $stickerPkg, $stickerId, $token){
     ),
   );
   $context = stream_context_create($headerOptions);
-  $result = file_get_contents(LINE_API,FALSE,$context);
+  $result = file_get_contents(LINE_API, FALSE, $context);
   $res = json_decode($result);
   return $res;
 }
