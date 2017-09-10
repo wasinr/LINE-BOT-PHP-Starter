@@ -4,8 +4,8 @@ define('LINE_API',"https://notify-api.line.me/api/notify");
 $token = "iHgwS5dOJDGgDOc7KZiHsoI8ugjH2mwEAU7DjrsrN9I"; //ใส่Token ที่copy เอาไว้
 $str = "สวัสดี"; //ข้อความที่ต้องการส่ง สูงสุด 1000 ตัวอักษร
 
-$res = notify_message($str, $token);
-$res = notify_sticker('ทดสอบสติ๊กเกอร์', 7, 1, $token);
+//$res = notify_message($str, $token);
+$res = notify_sticker('ทดสอบสติ๊กเกอร์', 1, 7, $token);
 print_r($res);
 
 
